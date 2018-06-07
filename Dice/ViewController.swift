@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Ani()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -28,13 +29,19 @@ class ViewController: UIViewController {
 
     
     @IBAction func rollButton(_ sender: Any) {
+        Ani()
+        
+    }
+    
+    func Ani(){
         randomindex1 = Int(arc4random_uniform(6))
         randomindex2 = Int(arc4random_uniform(6))
         
-       diceImageView1.image = UIImage(named: dicearray[randomindex1])
-       diceImageView2.image = UIImage(named: dicearray[randomindex2])
+        diceImageView1.image = UIImage(named: dicearray[randomindex1])
+        diceImageView2.image = UIImage(named: dicearray[randomindex2])
         let tot = randomindex2+1 + randomindex1+1
         Tot.text = String(tot)
+    
     }
     
 }
