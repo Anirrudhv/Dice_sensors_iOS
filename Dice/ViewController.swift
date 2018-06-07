@@ -43,6 +43,9 @@ class ViewController: UIViewController {
         Tot.text = String(tot)
     
     }
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        Ani()
+    }
     
 }
 
